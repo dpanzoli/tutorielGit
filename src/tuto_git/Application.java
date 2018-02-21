@@ -10,21 +10,30 @@ public class Application extends Frame implements WindowListener {
 		new Application();
 	}
 	
-	public Application() {
+	public Application() 
+	{
 		super();
 		
 		Modèle modl = new Modèle();
+		
 		Contrôleur ctrl = new Contrôleur(modl); 
+		
 		Vue vue = new Vue();
+		
 		modl.addObserver(vue);
+		
 		vue.addActionListener(ctrl);
 		
 		this.add(vue);
-		this.pack();
 		
+		this.pack();
+		this.setTitle("Jeu du clic");
 		this.setLocationRelativeTo(null);
+		
 		this.setVisible(true);
+		
 		this.addWindowListener(this);
+		
 	}
 
 	@Override
