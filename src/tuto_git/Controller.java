@@ -3,11 +3,11 @@ package tuto_git;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Contrôleur implements ActionListener {
+public class Controller implements ActionListener {
 
-	Modèle refModl;
+	Model refModl;
 	
-	public Contrôleur(Modèle m) {
+	public Controller(Model m) {
 		this.refModl = m;
 	}
 	

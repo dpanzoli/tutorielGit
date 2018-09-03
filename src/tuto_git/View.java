@@ -5,12 +5,12 @@ import java.awt.Dimension;
 import java.util.Observable;
 import java.util.Observer;
 
-public class Vue extends Button implements Observer {
+public class View extends Button implements Observer {
 	
-	public Vue() {
+	public View() {
 		super();
 		this.setLabel("0");
-		this.setPreferredSize(new Dimension(120,150));
+		this.setPreferredSize(new Dimension(120,60));
 	}
 
 	@Override

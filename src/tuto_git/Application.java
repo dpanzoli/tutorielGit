@@ -14,68 +14,42 @@ public class Application extends Frame implements WindowListener {
 	{
 		super();
 		
-		Modèle modl = new Modèle();
+		Model modl = new Model();
 		
-		Contrôleur ctrl = new Contrôleur(modl); 
+		Controller ctrl = new Controller(modl); 
 		
-		Vue vue = new Vue();
+		View view = new View();
 		
-		modl.addObserver(vue);
+		modl.addObserver(view);
 		
-		vue.addActionListener(ctrl);
+		view.addActionListener(ctrl);
 		
-		this.add(vue);
+		this.add(view);
 		
 		this.pack();
-		this.setTitle("Jeu du clic");
-		this.setLocationRelativeTo(null);
-		
-		this.setVisible(true);
-		
-		this.addWindowListener(this);
-		
+		this.setTitle("The clic game");
+		this.setVisible(true);	
 	}
 
 	@Override
-	public void windowActivated(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void windowActivated(WindowEvent e) {}
 
 	@Override
-	public void windowClosed(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void windowClosed(WindowEvent e) {}
 
 	@Override
-	public void windowClosing(WindowEvent e) {
-		// TODO Auto-generated method stub
-		System.exit(0);
-	}
+	public void windowClosing(WindowEvent e) {}
 
 	@Override
-	public void windowDeactivated(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void windowDeactivated(WindowEvent e) {}
 
 	@Override
-	public void windowDeiconified(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void windowDeiconified(WindowEvent e) {}
 
 	@Override
-	public void windowIconified(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void windowIconified(WindowEvent e) {}
 
 	@Override
-	public void windowOpened(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void windowOpened(WindowEvent e) {}
 
 }
